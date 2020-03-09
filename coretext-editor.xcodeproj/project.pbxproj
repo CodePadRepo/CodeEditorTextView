@@ -13,6 +13,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		663ED9172416851000CC661D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 663ED9122416850F00CC661D /* macos-poc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 663ED8F12416850A00CC661D;
+			remoteInfo = "macos-poc";
+		};
+		663ED9192416851000CC661D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 663ED9122416850F00CC661D /* macos-poc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 663ED9032416850F00CC661D;
+			remoteInfo = "macos-pocTests";
+		};
 		669F0E2124167B34009DAA5D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 669F0E0D24167B34009DAA5D /* Project object */;
@@ -23,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		663ED9122416850F00CC661D /* macos-poc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "macos-poc.xcodeproj"; path = "macos-poc/macos-poc.xcodeproj"; sourceTree = "<group>"; };
 		669F0E1624167B34009DAA5D /* coretext_editor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = coretext_editor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		669F0E1924167B34009DAA5D /* coretext_editor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coretext_editor.h; sourceTree = "<group>"; };
 		669F0E1A24167B34009DAA5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,9 +65,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		663ED9132416850F00CC661D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				663ED9182416851000CC661D /* macos-poc.app */,
+				663ED91A2416851000CC661D /* macos-pocTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		669F0E0C24167B34009DAA5D = {
 			isa = PBXGroup;
 			children = (
+				663ED9122416850F00CC661D /* macos-poc.xcodeproj */,
 				669F0E1824167B34009DAA5D /* coretext-editor */,
 				669F0E2324167B34009DAA5D /* coretext-editorTests */,
 				669F0E1724167B34009DAA5D /* Products */,
@@ -165,6 +190,12 @@
 			mainGroup = 669F0E0C24167B34009DAA5D;
 			productRefGroup = 669F0E1724167B34009DAA5D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 663ED9132416850F00CC661D /* Products */;
+					ProjectRef = 663ED9122416850F00CC661D /* macos-poc.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				669F0E1524167B34009DAA5D /* coretext-editor */,
@@ -172,6 +203,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		663ED9182416851000CC661D /* macos-poc.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "macos-poc.app";
+			remoteRef = 663ED9172416851000CC661D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		663ED91A2416851000CC661D /* macos-pocTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "macos-pocTests.xctest";
+			remoteRef = 663ED9192416851000CC661D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		669F0E1424167B34009DAA5D /* Resources */ = {
