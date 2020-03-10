@@ -15,6 +15,8 @@
 		663A7DCE2417D68300ADDD1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663A7DCC2417D68300ADDD1F /* LaunchScreen.storyboard */; };
 		663A7DD92417D68300ADDD1F /* CodeEditorTextViewPoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A7DD82417D68300ADDD1F /* CodeEditorTextViewPoCTests.swift */; };
 		663A7DE42417D68300ADDD1F /* CodeEditorTextViewPoCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A7DE32417D68300ADDD1F /* CodeEditorTextViewPoCUITests.swift */; };
+		663A7DF52417D98F00ADDD1F /* CodeEditorTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663A7DF42417D98F00ADDD1F /* CodeEditorTextView.framework */; };
+		663A7DF62417D98F00ADDD1F /* CodeEditorTextView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 663A7DF42417D98F00ADDD1F /* CodeEditorTextView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		663A7DF72417D98F00ADDD1F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				663A7DF62417D98F00ADDD1F /* CodeEditorTextView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		663A7DBE2417D68200ADDD1F /* CodeEditorTextViewPoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeEditorTextViewPoC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663A7DC12417D68200ADDD1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		663A7DDF2417D68300ADDD1F /* CodeEditorTextViewPoCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeEditorTextViewPoCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		663A7DE32417D68300ADDD1F /* CodeEditorTextViewPoCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditorTextViewPoCUITests.swift; sourceTree = "<group>"; };
 		663A7DE52417D68300ADDD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663A7DF42417D98F00ADDD1F /* CodeEditorTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeEditorTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663A7DF52417D98F00ADDD1F /* CodeEditorTextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 				663A7DD72417D68300ADDD1F /* CodeEditorTextViewPoCTests */,
 				663A7DE22417D68300ADDD1F /* CodeEditorTextViewPoCUITests */,
 				663A7DBF2417D68200ADDD1F /* Products */,
+				663A7DF32417D98F00ADDD1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +147,14 @@
 			path = CodeEditorTextViewPoCUITests;
 			sourceTree = "<group>";
 		};
+		663A7DF32417D98F00ADDD1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				663A7DF42417D98F00ADDD1F /* CodeEditorTextView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +165,7 @@
 				663A7DBA2417D68200ADDD1F /* Sources */,
 				663A7DBB2417D68200ADDD1F /* Frameworks */,
 				663A7DBC2417D68200ADDD1F /* Resources */,
+				663A7DF72417D98F00ADDD1F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
