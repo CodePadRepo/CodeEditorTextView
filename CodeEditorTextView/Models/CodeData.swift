@@ -33,6 +33,13 @@ open class CodeData {
         lines.remove(at: linePos)
     }
     
+    // TODO: Update this function not to get the whole code
+    public func updateCode(at range: NSRange, to text: String) {
+        let codeText = NSMutableString(string: dumpString())
+        codeText.replaceCharacters(in: range, with: text)
+        lines = CodeData.processRawText(String(codeText))
+    }
+    
     public func breakLine(_ linePos: Int, atPos breakIndex: String.Index) {
         let beforeBreak = String(lines[linePos][..<breakIndex])
         let afterBreak = String(lines[linePos][breakIndex...])
