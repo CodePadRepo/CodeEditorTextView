@@ -10,6 +10,7 @@ import UIKit
 
 open class CodeEditorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var codeEditorTextView: UITextView!
+    let codeData = CodeData(of: "int main() {}")
     
     override open func viewDidLoad() {
         super.viewDidLoad()
