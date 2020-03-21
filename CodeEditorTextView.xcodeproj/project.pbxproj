@@ -12,6 +12,8 @@
 		66498B8A2417CFEA00C0718A /* CodeEditorTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66498B892417CFEA00C0718A /* CodeEditorTextViewTests.swift */; };
 		66498B8C2417CFEA00C0718A /* CodeEditorTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 66498B7E2417CFEA00C0718A /* CodeEditorTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66FAE3E12425CB5E003FB5C4 /* CodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FAE3E02425CB5E003FB5C4 /* CodeData.swift */; };
+		66FAE3E62425DEFE003FB5C4 /* LanguageDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FAE3E52425DEFE003FB5C4 /* LanguageDefinition.swift */; };
+		66FAE3E92425DFE1003FB5C4 /* CLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FAE3E82425DFE1003FB5C4 /* CLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		66498B892417CFEA00C0718A /* CodeEditorTextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditorTextViewTests.swift; sourceTree = "<group>"; };
 		66498B8B2417CFEA00C0718A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66FAE3E02425CB5E003FB5C4 /* CodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeData.swift; sourceTree = "<group>"; };
+		66FAE3E52425DEFE003FB5C4 /* LanguageDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDefinition.swift; sourceTree = "<group>"; };
+		66FAE3E82425DFE1003FB5C4 /* CLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		66498B7D2417CFEA00C0718A /* CodeEditorTextView */ = {
 			isa = PBXGroup;
 			children = (
+				66FAE3E72425DFBE003FB5C4 /* LanguageDefs */,
 				66FAE3DF2425CB1A003FB5C4 /* View Controllers */,
 				66FAE3DE2425CB0B003FB5C4 /* Views */,
 				66FAE3DD2425CAFD003FB5C4 /* Models */,
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				66FAE3E02425CB5E003FB5C4 /* CodeData.swift */,
+				66FAE3E52425DEFE003FB5C4 /* LanguageDefinition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 				663A7DF12417D84900ADDD1F /* CodeEditorTextViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		66FAE3E72425DFBE003FB5C4 /* LanguageDefs */ = {
+			isa = PBXGroup;
+			children = (
+				66FAE3E82425DFE1003FB5C4 /* CLanguage.swift */,
+			);
+			path = LanguageDefs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FAE3E62425DEFE003FB5C4 /* LanguageDefinition.swift in Sources */,
+				66FAE3E92425DFE1003FB5C4 /* CLanguage.swift in Sources */,
 				66FAE3E12425CB5E003FB5C4 /* CodeData.swift in Sources */,
 				663A7DF22417D84900ADDD1F /* CodeEditorTextViewController.swift in Sources */,
 			);
