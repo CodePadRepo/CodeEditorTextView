@@ -25,6 +25,10 @@ open class CodeData {
         lines.insert("", at: newlinePos)
     }
     
+    public func deleteLine(at linePos: Int) {
+        lines.remove(at: linePos)
+    }
+    
     public func breakLine(_ linePos: Int, atPos breakIndex: String.Index) {
         let beforeBreak = String(lines[linePos][..<breakIndex])
         let afterBreak = String(lines[linePos][breakIndex...])
