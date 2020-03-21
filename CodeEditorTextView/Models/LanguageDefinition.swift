@@ -6,7 +6,7 @@
 //  Copyright © 2020 Ryang Sohn. All rights reserved.
 //
 
-struct LanguageDefinition {
+public struct LanguageDefinition {
     var name: String
     var highlights: [String]
 }
