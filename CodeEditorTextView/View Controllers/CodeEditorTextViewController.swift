@@ -10,24 +10,21 @@ import UIKit
 
 open class CodeEditorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var codeEditorTextView: UITextView!
-    let codeData = CodeData(of: "int main() {}")
+    let codeData = CodeData(of: "")
     
     override open func viewDidLoad() {
         super.viewDidLoad()
         codeEditorTextView.delegate = self
-        codeEditorTextView.attributedText = NSAttributedString(string: "")
+        let renderedString = codeData.renderCode(forLanguage: CLangaugeDef.def)
+        dump(renderedString)
+        codeEditorTextView.attributedText = codeData.renderCode(forLanguage: CLangaugeDef.def)
+        codeEditorTextView.autocorrectionType = .no
+        codeEditorTextView.autocapitalizationType = .none
     }
     
-    public func textViewDidChange(_ textView: UITextView) {
-        let attributedString = NSMutableAttributedString(string: textView.text)
-        let words = textView.text.components(separatedBy: " ")
-        
-        for word in words {
-            if word == "highlight" {
-                let range = (attributedString.string as NSString).range(of: word)
-                attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: range)
-            }
-        }
-        textView.attributedText = attributedString
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        codeData.updateCode(at: range, to: text)
+        textView.attributedText = codeData.renderCode(forLanguage: CLangaugeDef.def)
+        return false
     }
 }
