@@ -11,6 +11,7 @@
 		66498B852417CFEA00C0718A /* CodeEditorTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66498B7B2417CFEA00C0718A /* CodeEditorTextView.framework */; };
 		66498B8A2417CFEA00C0718A /* CodeEditorTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66498B892417CFEA00C0718A /* CodeEditorTextViewTests.swift */; };
 		66498B8C2417CFEA00C0718A /* CodeEditorTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 66498B7E2417CFEA00C0718A /* CodeEditorTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66FAE3E12425CB5E003FB5C4 /* CodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FAE3E02425CB5E003FB5C4 /* CodeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		66498B842417CFEA00C0718A /* CodeEditorTextViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeEditorTextViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66498B892417CFEA00C0718A /* CodeEditorTextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditorTextViewTests.swift; sourceTree = "<group>"; };
 		66498B8B2417CFEA00C0718A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66FAE3E02425CB5E003FB5C4 /* CodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,9 @@
 		66498B7D2417CFEA00C0718A /* CodeEditorTextView */ = {
 			isa = PBXGroup;
 			children = (
-				663A7DF12417D84900ADDD1F /* CodeEditorTextViewController.swift */,
+				66FAE3DF2425CB1A003FB5C4 /* View Controllers */,
+				66FAE3DE2425CB0B003FB5C4 /* Views */,
+				66FAE3DD2425CAFD003FB5C4 /* Models */,
 				66498B7E2417CFEA00C0718A /* CodeEditorTextView.h */,
 				66498B7F2417CFEA00C0718A /* Info.plist */,
 			);
@@ -87,6 +91,29 @@
 				66498B8B2417CFEA00C0718A /* Info.plist */,
 			);
 			path = CodeEditorTextViewTests;
+			sourceTree = "<group>";
+		};
+		66FAE3DD2425CAFD003FB5C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66FAE3E02425CB5E003FB5C4 /* CodeData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		66FAE3DE2425CB0B003FB5C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		66FAE3DF2425CB1A003FB5C4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				663A7DF12417D84900ADDD1F /* CodeEditorTextViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FAE3E12425CB5E003FB5C4 /* CodeData.swift in Sources */,
 				663A7DF22417D84900ADDD1F /* CodeEditorTextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
