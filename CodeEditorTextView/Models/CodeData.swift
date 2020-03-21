@@ -10,7 +10,7 @@ open class CodeData {
     private(set) var lines: [String]
     
     public init(of codeText: String) {
-        lines = codeText.components(separatedBy: "\n") // TODO: Support other line endings
+        lines = codeText.components(separatedBy: CharacterSet.newlines)
     }
     
     public func editLine(lineNumber: Int, newLineContent: String) {
