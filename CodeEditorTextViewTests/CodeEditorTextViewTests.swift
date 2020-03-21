@@ -37,7 +37,7 @@ class CodeEditorTextViewTests: XCTestCase {
         XCTAssertEqual(self.codeData.lines.count, 3)
     }
     
-    func testCodeBreakLine() {
+    func testCodeDataBreakLine() {
         let breakPos = testCode.firstIndex(of: "'")!
         self.codeData.breakLine(0, atPos: breakPos)
         XCTAssertEqual(self.codeData.lines.count, 2)
