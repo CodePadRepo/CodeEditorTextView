@@ -6,6 +6,8 @@
 //  Copyright © 2020 Ryang Sohn. All rights reserved.
 //
 
+import UIKit
+
 open class CodeData {
     private(set) var lines: [String]
     
@@ -50,5 +52,33 @@ open class CodeData {
     
     public func dumpString() -> String {
         return lines.joined(separator: "\n") // TODO: Support other line endings
+    }
+    
+    public func renderCode(forLanguage languageDef: LanguageDefinition) -> NSAttributedString {
+        let rendered = NSMutableAttributedString(string: "")
+        var firstLine = true
+        for line in lines {
+            if firstLine {
+                firstLine = false
+            } else {
+                rendered.append(NSAttributedString(string: "\n"))
+            }
+            let words = line.components(separatedBy: " ")
+            var firstWord = true
+            for word in words {
+                if firstWord {
+                    firstWord = false
+                } else {
+                    rendered.append(NSAttributedString(string: " "))
+                }
+                let renderedWord = NSMutableAttributedString(string: word)
+                if languageDef.highlights.contains(word) {
+                    let range = NSMakeRange(0, word.count)
+                    renderedWord.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: range)
+                }
+                rendered.append(renderedWord)
+            }
+        }
+        return rendered
     }
 }
