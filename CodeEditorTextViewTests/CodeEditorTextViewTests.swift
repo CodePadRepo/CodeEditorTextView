@@ -10,25 +10,38 @@ import XCTest
 @testable import CodeEditorTextView
 
 class CodeEditorTextViewTests: XCTestCase {
-
+    var codeData: CodeData!
+    let testCode = "print('Hello, world!')"
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.codeData = CodeData(of: testCode)
+    }
+    
+    func testCodeDataConstructor() {
+        XCTAssertNotNil(codeData)
+        XCTAssertEqual(self.codeData.lines.count, 1)
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testCodeDataEditLine() {
+        let newCode = "# edited"
+        self.codeData.editLine(lineNumber: 0, newLineContent: newCode)
+        XCTAssertEqual(newCode, self.codeData.dumpString())
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testCodeDataInsertLine() {
+        self.codeData.insertNewLine(after: 0)
+        XCTAssertEqual(self.codeData.lines[1], "")
+        XCTAssertEqual(self.codeData.lines.count, 2)
+        self.codeData.insertNewLine(before: 0)
+        XCTAssertEqual(self.codeData.lines[0], "")
+        XCTAssertEqual(self.codeData.lines.count, 3)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testCodeBreakLine() {
+        let breakPos = testCode.firstIndex(of: "'")!
+        self.codeData.breakLine(0, atPos: breakPos)
+        XCTAssertEqual(self.codeData.lines.count, 2)
+        XCTAssertEqual(self.codeData.lines[0], String(testCode.prefix(upTo: breakPos)))
+        XCTAssertEqual(self.codeData.lines[1], String(testCode.suffix(from: breakPos)))
     }
-
 }
