@@ -11,26 +11,32 @@
         <!--iOS Poc-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CodeEditorTextViewController" customModule="CodeEditorTextView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kje-vk-UtK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, world!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c5R-E6-ZwF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Kje-vk-UtK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ItF-Qh-p0K"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kje-vk-UtK" secondAttribute="bottom" id="V3y-4W-5Sl"/>
-                            <constraint firstItem="Kje-vk-UtK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="exS-IY-KgK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kje-vk-UtK" secondAttribute="trailing" id="qiQ-Dm-luI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c5R-E6-ZwF" secondAttribute="bottom" id="UUd-Qu-662"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c5R-E6-ZwF" secondAttribute="trailing" id="fY5-td-uga"/>
+                            <constraint firstItem="c5R-E6-ZwF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="imW-UK-Onp"/>
+                            <constraint firstItem="c5R-E6-ZwF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wzH-GI-XQn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="iOS Poc" id="vDV-oy-poP"/>
+                    <connections>
+                        <outlet property="codeEditorTextView" destination="c5R-E6-ZwF" id="M6I-oA-Ewt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
