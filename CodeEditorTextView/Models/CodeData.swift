@@ -9,8 +9,12 @@
 open class CodeData {
     private(set) var lines: [String]
     
+    fileprivate static func processRawText(_ codeText: String) -> [String] {
+        return codeText.components(separatedBy: CharacterSet.newlines)
+    }
+    
     public init(of codeText: String) {
-        lines = codeText.components(separatedBy: CharacterSet.newlines)
+        self.lines = CodeData.processRawText(codeText)
     }
     
     public func editLine(lineNumber: Int, newLineContent: String) {
